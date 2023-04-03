@@ -19,17 +19,21 @@ function generatePassword() {
     var password = ""; 
     
     var passwordLength = window.prompt("How many characters would you like your password to contain?");
-
+    //if no passwordlength enter, stop
     if (!passwordLength==true) {
         return;
     }
-    
-       // Alert if password length < 8 or > 128
+    // Alert to enter a number for passwordlength
+    if (isNaN(passwordLength)) {
+        window.alert("please enter a number!")
+        return generatePassword();
+    }
+    // Alert passwordlength between 8 to 128
     if (passwordLength < 8 || passwordLength > 128) {
         window.alert("password length must be between 8 to 128 characters!")
         return generatePassword();
     }
-
+    
     if (passwordLength >= 8 && passwordLength <= 128) {
     
         var getSpecial = window.confirm("click OK to confirm including special characters");
