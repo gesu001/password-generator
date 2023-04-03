@@ -18,7 +18,7 @@ function generatePassword() {
         
     var password = ""; 
     
-    var passwordLength = window.prompt("How many charaters would you like your password to contain?");
+    var passwordLength = window.prompt("How many characters would you like your password to contain?");
 
     if (!passwordLength==true) {
         return;
@@ -26,7 +26,7 @@ function generatePassword() {
     
        // Alert if password length < 8 or > 128
     if (passwordLength < 8 || passwordLength > 128) {
-        window.alert("password length must be between 8 to 128 charaters!")
+        window.alert("password length must be between 8 to 128 characters!")
         return generatePassword();
     }
 
@@ -34,7 +34,7 @@ function generatePassword() {
     
         var getSpecial = window.confirm("click OK to confirm including special characters");
 
-        // Include special charaters and get one random special character 
+        // Include special characters and get one random special character 
         if (getSpecial) {
             userChoice += passwordOption.specialChars;
             
@@ -81,16 +81,16 @@ function generatePassword() {
             password += getRandomLower();
         }
 
-        // Alert user to choose at least one type of charater
+        // Alert user to choose at least one type of character
         if(!userChoice) {
             window.alert("You must choose at least one charater! Please try again.")
             return generatePassword();
         }
     
-        // Continue to get random charaters from use's choices to match the required passwordlength 
+        // Continue to get random characters from use's choices to match the required passwordlength 
         while(password.length < passwordLength) {
             
-            // Get random charater function base on userChoice
+            // Get random character function base on userChoice
             function getRandomeChars() {
                 return userChoice[Math.floor(Math.random() * userChoice.length)]
             }
@@ -100,7 +100,7 @@ function generatePassword() {
         // Convert password string to array
         let arr = password.split("");
 
-        // Shuffle the password charaters by using The Fisher Yates Method
+        // Shuffle the password characters by using The Fisher Yates Method
         for (let i = arr.length -1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i+1));
         let k = arr[i];

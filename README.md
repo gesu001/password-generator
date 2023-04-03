@@ -1,14 +1,14 @@
-# password-generator
+# Password-Generator
 
-![my ScreenShot](https://gesu001.github.io/password-generator/)
+![Password-Generator ScreenShot](./images/password%20generator%20screenshot.png)
 
 ## Description
 
-This password generator application can easily create random password between 8 to 128 charaters. User can choose to include special character, number, uppercase or lowercase in their passwords. 
+This password generator application can easily create random password between 8 to 128 characters. User can choose to include special character, number, uppercase or lowercase in their passwords. 
 
 ## Technologies Used
 
-Javascript
+JAVASCRIPT
 
 HTML
 
